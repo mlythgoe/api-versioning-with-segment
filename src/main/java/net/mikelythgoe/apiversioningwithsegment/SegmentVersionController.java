@@ -11,8 +11,19 @@ public class SegmentVersionController {
         return "Hello Version One";
     }
 
+    // Version must be major.minor.patch format
     @GetMapping(value = "/{version}/hello", version = "2.0")
     public String helloV2() {
         return "Hello Version Two";
+    }
+
+    @GetMapping(value = "/{version}/hello", version = "3.5")
+    public String hellov35() {
+        return "Hello Version 3.5";
+    }
+
+    @GetMapping(value = "/{version}/hello", version = "9.9")
+    public String hellov99() {
+        return "Hello Version 9.9";
     }
 }

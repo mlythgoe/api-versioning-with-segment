@@ -6,17 +6,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SegmentVersionController {
 
-    @GetMapping(value = "/{version}/hello", version = "1.0")
+    // For segment versioning, version must be major.minor.patch format
+
+    // http://localhost:8080/1.0/hello (you can use /1.0/, /1/, or /1.0.0/)
+    @GetMapping(value = "/{version}/hello", version = "1")
     public String helloV1point0() {
         return "Hello Version One";
     }
 
-    // Version must be major.minor.patch format
+    // http://localhost:8080/2.0/hello (you can use /2.0/, /2/, or /2.0.0/)
     @GetMapping(value = "/{version}/hello", version = "2.0")
     public String helloV2point0() {
         return "Hello Version Two";
     }
 
+    // http://localhost:8080/3.5/hello (you can use /3.5/, or /3.5.0/)
     @GetMapping(value = "/{version}/hello", version = "3.5")
     public String hellov3point5() {
         return "Hello Version 3.5";

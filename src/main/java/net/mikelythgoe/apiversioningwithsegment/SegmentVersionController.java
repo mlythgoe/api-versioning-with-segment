@@ -38,4 +38,10 @@ public class SegmentVersionController {
         return "{\"message\":\"Hello Version 9.9\"}";
     }
 
+    // http://localhost:8080/hello/9.9.9 (matches on /9.9.9)
+    @GetMapping(value = "/hello/{version}", version = "9.9.9")
+    public String helloV9point9point9() {
+        return "{\"message\":\"Hello Version 9.9.9\"}";
+    }
+
 }

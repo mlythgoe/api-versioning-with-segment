@@ -11,10 +11,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
         configurer
                 .addSupportedVersions("1.0", "2.0", "10.0") // Add Supported Versions defines what versions can be supplied
-                .setDefaultVersion("2.0")
-                // It makes no sense to have a default index value for a segment - the segment should always be there
-                // but spring allows it to be set
-                .usePathSegment(1); // the index of the url path (0 being the first segment)
+                .setDefaultVersion("2.0") // Default version does not seem to work for segments, maybe it will
+                .usePathSegment(1); // the name of the query parameter that supplies the version
 
     }
 }

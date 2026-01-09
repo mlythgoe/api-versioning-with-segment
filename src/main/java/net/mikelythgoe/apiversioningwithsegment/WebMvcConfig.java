@@ -11,7 +11,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
         configurer
                 .addSupportedVersions("1.0", "2.0", "10.0") // Add Supported Versions defines what versions can be supplied
-                .setDefaultVersion("2.0") // Default version does not seem to work for segments, maybe it will
+                .setDefaultVersion("2.0") // The default version does not seem to work for segments, maybe it will
                 .usePathSegment(1); // the name of the query parameter that supplies the version
 
     }

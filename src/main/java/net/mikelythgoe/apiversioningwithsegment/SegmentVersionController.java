@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SegmentVersionController {
-    // For versioning, version must be major.minor.patch format
+    // For versioning, the version must be major.minor.patch format
 
     // http://localhost:8080/hello/1.0 (matches on /1.0/, /1/, or /1.0.0/, but you can't use /1.1/, /1.0.1/, etc.')
     @GetMapping(value = "/hello/{version}", version = "1")

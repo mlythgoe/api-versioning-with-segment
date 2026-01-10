@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "28a5ef23-93f9-4107-8711-04af025ac937",
+		"name": "Spring Boot Rest - API Versioning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48494425",
+		"_collection_link": "https://mikelythgoe-postman-team-9242.postman.co/workspace/mikelythgoe-postman-team-Worksp~bfacf4a3-f3d1-468f-83f8-324c2ea45907/collection/48494425-28a5ef23-93f9-4107-8711-04af025ac937?action=share&source=collection_link&creator=48494425"
+	},
+	"item": [
+		{
+			"name": "hello using http header - X-Api-Version=1.0 (just 1 works too, the dots are just separators for major,  minor and patch)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Api-Version",
+						"value": "1.0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using http header - X-Api-Version=2.0",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Api-Version",
+						"value": "2.0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using http header - X-Api-Version=3.5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Api-Version",
+						"value": "3.5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using http header - X-Api-Version=9.9.9",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Api-Version",
+						"value": "9.9.9",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using query parameter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello?version=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using url segment - 1.0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello/1.0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"1.0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using url segment - 9.9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello/9.9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"9.9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using url segment - 9.9.9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello/9.9.9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"9.9.9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using content type and version - Accept=application/json;version=3.5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json;version=3.5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using content type and version - Accept=application/xml;version=2.0",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

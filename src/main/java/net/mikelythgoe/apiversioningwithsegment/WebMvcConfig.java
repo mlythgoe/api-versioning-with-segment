@@ -7,9 +7,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
 
-    private static final String DEFAULT_VERSION = "2.0";
-    private static final String[] SUPPORTED_VERSIONS = {"1.0", "2.0", "3.5", "9"};
     private static final int PATH_SEGMENT = 1;
+    private static final String[] SUPPORTED_VERSIONS = {"1.0", "2.0", "3.5", "9"};
+    private static final String DEFAULT_VERSION = "2.0";
 
     public void configureApiVersioning(ApiVersionConfigurer configurer) {
 

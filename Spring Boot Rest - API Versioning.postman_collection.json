@@ -218,7 +218,7 @@
 			"response": []
 		},
 		{
-			"name": "hello using content type and version - Accept=application/xml;version=2.0",
+			"name": "hello using content type and version - Accept=application/xml - version goes to default",
 			"request": {
 				"method": "GET",
 				"header": [

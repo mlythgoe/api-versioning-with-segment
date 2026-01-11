@@ -65,6 +65,32 @@
 					{
 						"key": "X-Api-Version",
 						"value": "3.5",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using http header - X-Api-Version=9.9",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Api-Version",
+						"value": "9.9",
 						"type": "text"
 					}
 				],
@@ -108,12 +134,12 @@
 			"response": []
 		},
 		{
-			"name": "hello using query parameter",
+			"name": "hello using query parameter - 1.0",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/hello?version=10",
+					"raw": "http://localhost:8080/hello?version=1.0",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -125,7 +151,107 @@
 					"query": [
 						{
 							"key": "version",
-							"value": "10"
+							"value": "1.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using query parameter - 2.0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello?version=2.0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "2.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using query parameter - 3.5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello?version=3.5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "3.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using query parameter - 9.9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello?version=9.9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "9.9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using query parameter - 9.9.9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello?version=9.9.9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "9.9.9"
 						}
 					]
 				}
@@ -147,6 +273,46 @@
 					"path": [
 						"hello",
 						"1.0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using url segment - 2.0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello/2.0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"2.0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello using url segment - 3.5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello/3.5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"3.5"
 					]
 				}
 			},

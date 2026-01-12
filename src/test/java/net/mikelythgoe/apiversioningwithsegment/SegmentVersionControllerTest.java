@@ -52,7 +52,7 @@ public class SegmentVersionControllerTest {
     @Test
     void helloV9point9_ShouldReturnVersion9point9() throws Exception {
         mockMvc.perform(get("/hello/9.9")
-                        .accept(MediaType.APPLICATION_JSON ))
+                        .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.message").value("Hello Version 9.9"));
     }
@@ -74,6 +74,5 @@ public class SegmentVersionControllerTest {
         mockMvc.perform(get("/hello?version=99999")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isBadRequest());
-        ;
     }
 }

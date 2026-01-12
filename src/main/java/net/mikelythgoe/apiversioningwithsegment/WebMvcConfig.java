@@ -13,10 +13,15 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     public void configureApiVersioning(ApiVersionConfigurer configurer) {
 
+        // Add Supported Versions defines what versions can be supplied.
+        // Adding a Default version allows the API to respond with a default version if none is specified.
+        // BUT - this does not work for segments.
+        // The usePathSegment method specifies the name of the path segment that supplies the version.
         configurer
-                .addSupportedVersions(SUPPORTED_VERSIONS) // Add Supported Versions defines what versions can be supplied
-                .setDefaultVersion(DEFAULT_VERSION) // The default version does not seem to work for segments, maybe it will
-                .usePathSegment(PATH_SEGMENT); // the name of the query parameter that supplies the version
+                .addSupportedVersions(SUPPORTED_VERSIONS)
+                .setDefaultVersion(DEFAULT_VERSION)
+                .usePathSegment(PATH_SEGMENT); // the name of the query parameter that supplies the
+                                               // version
 
     }
 }
